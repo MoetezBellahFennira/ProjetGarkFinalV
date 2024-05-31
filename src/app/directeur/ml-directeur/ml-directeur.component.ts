@@ -15,6 +15,7 @@ export class MlDirecteurComponent  {
   results: any[] | undefined;
   loading: boolean = false;
   players?: string[] ;
+  player_url: string="";
   constructor(private apiService: PredictionService) {this.getPlayers(); }
 
   getPlayers(): void {
@@ -34,6 +35,7 @@ export class MlDirecteurComponent  {
       .subscribe(
         data => {
           this.predictedValue = data.predicted_value/ 1000000;
+          this.player_url=data.player_url
           this.error = "";
         },
         error => {

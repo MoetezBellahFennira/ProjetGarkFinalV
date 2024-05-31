@@ -5,6 +5,14 @@ html, body {
   width: 100%;
   height: 100%;
 }
+.playerurl{
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin-top: -8%;
+  margin-left: 70%;
+  border-radius: 50%;
+}
 /* *********************** */
 .table-wrapper {
   overflow-x: auto;

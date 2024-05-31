@@ -10,17 +10,21 @@
         <!-- prediction.component.html -->
         <div class="selectPredRank" style="left: 0%;top:2%"> 
           <select (change)="predictValue($event)" id="pred">
-            <option value="" disabled selected>Choisir un joueur</option>
+            <option value="" disabled selected>choose a player
+            </option>
             <option *ngFor="let player of players" [value]="player">{{ player }}</option>
             
-         
           </select>
         </div>
+       
         <div>
           <p *ngIf="predictedValue" style="margin-left: 25%; margin-top: -30px;"> The value of this player{{ nomJoueur }} is {{ predictedValue }} M€</p>
-         </div><br>
-        <br/><br/>
         
+        </div>
+        <img src={{player_url}} alt="" class="playerurl">
+        <br>
+      
+        <br/><br/>
          <div>
           Analyse the sentiment of supporter <button (click)="fetchSentiments()" [disabled]="loading" class="button-29" role="button">Analyse</button>
         </div> 

@@ -8,16 +8,16 @@
         <h1 style="margin-left: 25%;">Available players :</h1>
         <div class="selectPredRank" style="left: 20%;top:2%">
     <select (change)="predict($event)">
-      <option value="" disabled selected>Choisir un joueur</option>
+      <option value="" disabled selected>Choose a Player</option>
       <option *ngFor="let player of players" [value]="player">{{ player }}</option>
     </select>
     </div>
     
     <div *ngIf="prediction" class="resultanim">
-      <h2>Informations sur les blessures de {{ prediction.Joueur }}</h2>
+      <h2>injury information {{ prediction.Joueur }}</h2>
       <p>Prediction : {{ prediction.Prediction }}</p>
-      <p>Raison : {{ prediction.Raison }}</p>
-      <p>Gravité de la blessure : {{ prediction['Gravite de la blessure'] }}</p>
+      <p>Reason : {{ prediction.Raison }}</p>
+      <p>Severity of injury : {{ prediction['Gravite de la blessure'] }}</p>
     </div>
     </div>
   </div>

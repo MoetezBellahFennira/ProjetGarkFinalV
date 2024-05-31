@@ -14,10 +14,10 @@
     </div>
     
     <div *ngIf="prediction" class="resultanim">
-      <h2>Informations sur les blessures de {{ prediction.Joueur }}</h2>
+      <h2>injury information {{ prediction.Joueur }}</h2>
       <p>Prediction : {{ prediction.Prediction }}</p>
-      <p>Raison : {{ prediction.Raison }}</p>
-      <p>Gravité de la blessure : {{ prediction['Gravite de la blessure'] }}</p>
+      <p>Reason: {{ prediction.Raison }}</p>
+      <p>Severity of injury: {{ prediction['Gravite de la blessure'] }}</p>
     </div>
     </div>
   </div>
